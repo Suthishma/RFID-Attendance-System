@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("img.jpg");
+  min-height: 680px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: transparent;
+  opacity: 0.3;
+  color: transparent;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  font-family: 'cursive';
+  font-size: 150%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Owl Carousel Styles */
+.owl-carousel {
+  width: 100%;
+}
+
+.owl-carousel img {
+  width: 100%;
+  height: auto;
+}
+</style>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Add JavaScript to apply the "current" class dynamically -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var links = document.querySelectorAll('.topnav a');
+  var currentPage = '<?php echo basename($_SERVER['PHP_SELF']); ?>'
+
+  links.forEach(function(link) {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('current');
+    }
+  });
+
+  // Initialize Owl Carousel
+  $('.owl-carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true
+  });
+});
+</script>
+
+</head>
+<body>
+
+<div class="bg-img">
+  <div class="container">
+    <div class="topnav">
+      <a href="userhome.php">HOME</a>
+      <a href="login.php">LOGIN</a>
+      <a href="registration1.php">REGISTRATION</a>
+      <a href="contact.php">CONTACT US</a>
+      <a href="pages html mini\about us.php">ABOUT US</a>
+      <a href="pages html mini\logout.php">SIGNOUT</a>
+    </div>
+  </div>
+
+  
+
+  <div class="hero-text">
+    <h1 style="font-size:70px">RFID ATTENDANCE SYSTEM</h1>
+    <h3 style="font-size:30px"></h3>
+  </div>
+</div>
+
+</body>
+</html>
